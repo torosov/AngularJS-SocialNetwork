@@ -4,6 +4,10 @@
 angular.module('socialNetwork', [
     'ngRoute',
     'socialNetwork.home',
+    'socialNetwork.common',
+    'socalNetwork.newsFeed',
+    'socialNetwork.users.identity'
 ]).config(['$routeProvider', function ($routeProvider) {
     $routeProvider.otherwise({redirectTo: '/'});
-}]);
+}])
+    .constant('BASE_URL','http://softuni-social-network.azurewebsites.net/api/')
